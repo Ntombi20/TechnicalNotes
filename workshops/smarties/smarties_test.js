@@ -44,20 +44,20 @@ test("find all the smarties we have less than 7 for", function(assert){
 
 // });
 
-// test("can I group smarties", function(assert){
-//     var smartieGroups = groupSmarties(smartyList);
+test("can I group smarties", function(assert){
+    var smartieGroups = groupSmarties(smartyList);
 
-//     assert.deepEqual(smartieGroups, {
-//         white : 0,
-//         blue : 0,
-//         orange : 0,
-//         white : 0,
-//         pink : 0,
-//         yellow : 0,
-//         red : 0
-//     });
+    assert.deepEqual(smartieGroups, {
+        white : 3,
+        blue : 3,
+        orange : 3,
+        pink : 1,
+        yellow : 1,
+        red : 1
+    });
 
-// });
+});
+        
 
 // test("can I sort smarties", function(assert){
 //     var sortedSmarties = sortSmarties(smarties);

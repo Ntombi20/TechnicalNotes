@@ -35,8 +35,18 @@ var findSmarties = function(){
 
 };
 
-var groupSmarties = function(){
-
+var groupSmarties = function(smartyList){
+    var smarties = {};
+    for(var index in smartyList){
+        var smarty = smartyList[index];
+        console.log(smarty);
+        //check if the color of the smarty is in the map
+        if (smarties[smarty.color] == undefined){
+            smarties[smarty.color] = 0; 
+        }
+      smarties[smarty.color]++; 
+ }
+    return smarties;
 };
 
 var sortSmarties = function(){
