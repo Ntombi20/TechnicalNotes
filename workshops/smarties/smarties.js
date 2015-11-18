@@ -31,8 +31,16 @@ var findSmartiesLessThan = function(smarties, num){
     return lessThan;
 };
 
-var findSmarties = function(){
-
+var findSmarties = function(smarties, func){
+var smartyList = [];
+for(var i=0; i < smarties.length; i++){
+  func(smarties[i]);
+  console.log(func(smarties[i]));
+    if(func(smarties[i]) === true){
+    smartyList.push(smarties[i]);
+  } 
+}
+return smartyList;
 };
 
 var groupSmarties = function(smartyList){
